@@ -28,7 +28,7 @@ namespace stopwatch1
             {
                 stopwatch.Start();
 
-                Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+                Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
                 {
                     lblStopWatch.Text = stopwatch.Elapsed.ToString();
 
@@ -57,6 +57,11 @@ namespace stopwatch1
             lblStopWatch.Text = "00:00:00.00000";
             buttonStart.Text = "Start";
             stopwatch.Reset();
+        }
+
+        private void ButtonLap_Clicked(object sender, EventArgs e)
+        {
+            
         }
     }
 }
